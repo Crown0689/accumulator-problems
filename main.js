@@ -32,13 +32,16 @@ results on the index page in the browser.
 
 
 function sum(arr)  {
-    if (arr.length===0){return 0}
+    if (arr.length===0){return 0};
+    return arr.reduce((accumulator, current)=>accumulator+current);
+    
+/*     if (arr.length===0){return 0}
     let sum = 0 ; 
     for(let i=0; i<arr.length; i++){
         console.log(" I am at position", i, "passing", arr[i]);
         sum+= arr[i];
     }
-    return sum;
+    return sum; */
 }
 
 
