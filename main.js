@@ -147,6 +147,14 @@ function interleave(arr1, arr2){
     for (let i = 0; i < arr1.length; i++) {
         newArr.push(arr1[i], arr2[i]);
     } */
+
+    const interleave = (a,b) => {
+/* 
+        return a.reduce((acc,curr,index) => {
+           acc.push(curr, b[index]);
+           return acc;
+        },[]);
+       } */
     
     return arr1.reduce((newArr,curr,index)=> newArr.concat(curr, arr2[index]),[]);
 
@@ -190,7 +198,15 @@ Example:
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
 */
 
+function flipArray(incoming){
+    let obj = {};
+   for (let i=0; i<incoming.length; i++){
+        obj[incoming[i]]=i;
+    }
+    return obj; 
 
+  
+}
 
 
 
