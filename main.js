@@ -62,14 +62,16 @@ Example: if you pass it "abc" then it should return "aabbcc"
 
 
 function doubleLetters (str){
-    if (str==null || str==""){
+   /*  if (str==null || str==""){
         return "";
-    }
-    let newString=""; 
+    } */
+    return str.split("").reduce ((acc, curr) => acc+curr+curr, "");
+
+ /*    let newString=""; 
     for (let i=0;i<str.length; i++){
         newString+=str[i]+str[i];
     }
-    return newString;
+    return newString; */
 }
 
 
@@ -140,7 +142,16 @@ Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should retur
 NOTE: you can assume each input will be the same length
 */
 
+function interleave(arr1, arr2){
+/*     let newArr = [];
+    for (let i = 0; i < arr1.length; i++) {
+        newArr.push(arr1[i], arr2[i]);
+    } */
+    
+    return arr1.reduce((newArr,curr,index)=> newArr.concat(curr, arr2[index]),[]);
 
+    
+}
 
 
 
