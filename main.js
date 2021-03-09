@@ -31,7 +31,15 @@ results on the index page in the browser.
 */
 
 
-
+function sum(arr)  {
+    if (arr.length===0){return 0}
+    let sum = 0 ; 
+    for(let i=0; i<arr.length; i++){
+        console.log(" I am at position", i, "passing", arr[i]);
+        sum+= arr[i];
+    }
+    return sum;
+}
 
 
 
@@ -50,7 +58,16 @@ Example: if you pass it "abc" then it should return "aabbcc"
 
 
 
-
+function doubleLetters (str){
+    if (str==null || str==""){
+        return "";
+    }
+    let newString=""; 
+    for (let i=0;i<str.length; i++){
+        newString+=str[i]+str[i];
+    }
+    return newString;
+}
 
 
 
@@ -67,7 +84,14 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
-
+function doubleNumbers(numbers){
+  
+    return numbers.map((num) => num*2);
+     //for (let i = 0; i<numbers.length; i++) {
+     //   numbers[i]=numbers[i]*2;
+     //}
+     //return numbers;
+ }
 
 
 
@@ -88,6 +112,9 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 0) you'd get [0,0,0]
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
+function multiplyNumbers(numbers, factor){
+    return numbers.map((num)=> num*factor);
+}
 
 
 
