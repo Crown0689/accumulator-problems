@@ -149,12 +149,12 @@ function interleave(arr1, arr2){
     } */
 
     const interleave = (a,b) => {
-/* 
+
         return a.reduce((acc,curr,index) => {
            acc.push(curr, b[index]);
            return acc;
         },[]);
-       } */
+       }
     
     return arr1.reduce((newArr,curr,index)=> newArr.concat(curr, arr2[index]),[]);
 
@@ -226,7 +226,15 @@ If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: 
 
 */
 
+function arraysToObject(inputArray){
+    let obj = {};
+    inputArray.forEach((element) => {
+        obj [element[0]]=element[1];
+    });
+    return obj;
 
+
+}
 
 
 
@@ -249,10 +257,30 @@ If you pass it "hello" then it should return "olleh"
 
 
 
+function reverseString (inputString){
 
 
 
 
+if (inputString ===""){
+        return "";
+    } 
+    let newString="";
+    
+
+
+
+    for (i=inputString.length; i>=0; i--){
+        if (newString==="undefined"){
+            newString = inputString [i];
+        } else {
+            newString+=inputString[i];
+        }
+    }
+  
+    return newString; 
+
+}
 
 
 
@@ -272,7 +300,21 @@ If you pass it "heehaw" then it should return false because "hee" doesn't equal 
 */
 
 
+function repeats(inputString){
+    
+    if(!inputString.length%2===0){
+        return false;
+    }
+    let firstHalf = inputString.substring(0, inputString.length/2-1);
+    let secondHalf = inputString.substring(inputString.length/2, inputString.length);
 
+    if (firstHalf==secondHalf){
+        return true;
+    }
+
+    return false;
+
+}
 
 
 
